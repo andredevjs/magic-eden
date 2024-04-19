@@ -47,6 +47,7 @@ async function getCollectionTokens(token = 'gamestone') {
 }
 
 async function getBuyingPSBT(params) {
+  console.log(`Buy parameters: ${JSON.stringify(params, null, 3)}`);
   const response = await fetch(
     `${MAGIC_EDEN}/v2/ord/btc/psbt/buying?${new URLSearchParams(params)}`,
     {

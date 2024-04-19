@@ -79,7 +79,7 @@ const generateLocalKeys = () => {
     price: tokenToBuy.listedPrice,
     tokenId: tokenToBuy.id,
     buyerAddress: p2tr.address,
-    buyerTokenReceiveAddress: p2tr.address,
+    buyerTokenReceiveAddress: process.env.RECEIVE_TOKEN_ADDRESS || p2tr.address,
     feerateTier: 'minimumFee',
     creatorTipsType: 'none',
     useUnconfirmedUTXO: false,
